@@ -10,6 +10,10 @@
 
   <PropertyGroup>
     <PackageId>Sift4Net</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <PackageTags>C#;.Net;Feature Detection;SIFT;Algorithm</PackageTags>
+    <Description>.Net implementation of the SIFT algorithm for feature detection.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/peterwidmer/Sift4Net</RepositoryUrl>
   </PropertyGroup>
