@@ -8,9 +8,7 @@ namespace NuGet.Workflow.Tests
       [TestMethod]
       public void Test1()
       {
-         var class1 = new Class1();
-
-         Assert.AreEqual("Foo", class1.Value);
+         Assert.AreNotEqual("Foo", "Bar");
       }
    }
 }

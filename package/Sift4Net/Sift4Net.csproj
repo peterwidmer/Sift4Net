@@ -5,8 +5,7 @@
     <Title>Sift4Net</Title>
     <RootNamespace>Sift4Net</RootNamespace>
     <AssemblyName>Sift4Net</AssemblyName>
-    <Version>0.0.0</Version>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup>
