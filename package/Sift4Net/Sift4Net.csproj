@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Sift4Net</Product>
+    <Title>Sift4Net</Title>
+    <RootNamespace>Sift4Net</RootNamespace>
+    <AssemblyName>Sift4Net</AssemblyName>
+    <Version>0.0.0</Version>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Sift4Net</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/peterwidmer/Sift4Net</RepositoryUrl>
+  </PropertyGroup>
+
+  <Target Name="PrepareReleaseNotes" BeforeTargets="GenerateNuspec">
+    <PropertyGroup>
+      <PackageDescription>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../RELEASE-NOTES"))</PackageDescription>
+    </PropertyGroup>
+  </Target>
+</Project>
