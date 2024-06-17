@@ -6,6 +6,7 @@
     <RootNamespace>Sift4Net</RootNamespace>
     <AssemblyName>Sift4Net</AssemblyName>
     <Version>0.0.1</Version>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -15,6 +16,7 @@
     <Description>.Net implementation of the SIFT algorithm for feature detection.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/peterwidmer/Sift4Net</RepositoryUrl>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <Target Name="PrepareReleaseNotes" BeforeTargets="GenerateNuspec">
@@ -22,4 +24,8 @@
       <PackageDescription>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../RELEASE-NOTES"))</PackageDescription>
     </PropertyGroup>
   </Target>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+  </ItemGroup>
 </Project>
