@@ -4,7 +4,7 @@ on:
     - "v[0-9]+.[0-9]+.[0-9]+-preview[0-9][0-9][0-9]"
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
     - name: Checkout
@@ -12,8 +12,8 @@ jobs:
     - name: Set VERSION variable from tag
       run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
     - name: Pack
-      run: dotnet pack --configuration Release /p:AssemblyVersion=${{ env.VERSION }} /p:Version=${{ env.VERSION }} --output .
+      run: dotnet pack --configuration Release /p:Version=${VERSION} --output .
     - name: Push
-      run: dotnet nuget push Sift4Net.${{ env.VERSION }}.nupkg --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Sift4Net.${VERSION}.nupkg --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
